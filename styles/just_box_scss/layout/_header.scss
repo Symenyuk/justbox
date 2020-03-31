@@ -1,0 +1,131 @@
+header {
+	height: 177px;
+	padding-top: 45px;
+	@include max1024 {
+		height: 56px;
+		padding-top: 0;
+		box-shadow: inset 0 3px 35px rgba(#000, .05);
+	}
+	> .container {
+		display: flex;
+		justify-content: space-between;
+		@include max1024 {
+			display: none;
+		}
+		.logo {
+			background-image: url(../../img/logo.png);
+			background-repeat: no-repeat;
+			background-position: 0 0;
+			flex-shrink: 0;
+			min-width: 260px;
+		}
+		.sign {
+			align-self: flex-start;
+			height: 15px;
+			font-size: 0;
+			background-image: url(../img/person.png);
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			padding-left: 25px;
+			margin-top: 40px;
+			> div, > a {
+				font-size: 16px;
+				color: #5f5e5a;
+				font-style: italic;
+					display: inline-flex;
+				&.sing_in {
+					padding-right: 10px;
+					position: relative;
+					border-right: 1px solid #f1f1f1;
+				}
+				&.sing_up {
+					padding-left: 10px;
+				}
+			}
+		}
+		.info_box {
+			.phone {
+				color: #5f5e5a;
+				font-size: 22px;
+				font-style: italic;
+				background-image: url(../img/phone.png);
+				background-repeat: no-repeat;
+				background-position: 0 center;
+				padding-left: 25px;
+			}
+			.basket {
+				padding-top: 50px;
+				> a, > span {
+					display: inline-flex;
+					font-size: 16px;
+					color: #5f5e5a;
+					font-style: italic;
+				}
+				.basket_value {
+					padding-left: 25px;
+					background-image: url(../img/basket.png);
+					background-repeat: no-repeat;
+					background-position: 0 0;
+					padding-right: 15px;
+					border-right: 1px solid #f1f1f1;
+				}
+				.money_amount {
+					padding-left: 15px;
+				}
+			}
+		}
+	}
+	> .mobile_container {
+		display: none;
+		width: 100%;
+		height: 100%;
+		@include max1024 {
+			display: flex;
+			justify-content: space-between;
+		}
+		> button {
+			display: flex;
+			width: 55px;
+			border: none;
+			background-color: transparent;
+			background-repeat: no-repeat;
+			background-position: center center;
+			border-left: 1px solid #f1f1f1;
+			border-right: 1px solid #f1f1f1;
+		}
+		.btn_mobile_nav {
+			border-left: none;
+			background-image: url(../img/btn-mobile-menu.png);
+			background-position: center 22px;
+			&._ico {
+				background-position: center -37px;
+			}
+		}
+		.btn_mobile_search {
+			background-image: url(../img/ico-search.png);
+		}
+		.mobile_logo {
+			min-width: 142px;
+			background-image: url(../../img/logo.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: 95%;
+			flex-shrink: 40%;
+			@include mobile {
+				background-size: 65%;
+			}
+		}
+		.btn_mobile_sign {
+			background-image: url(../img/person.png);
+		}
+		.link_mobile_basket {
+			display: flex;
+			width: 55px;
+			background-image: url(../img/basket.png);
+			background-repeat: no-repeat;
+			background-position: center center;
+			border-left: 1px solid #f1f1f1;
+		}
+	}
+
+}

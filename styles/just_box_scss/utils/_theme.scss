@@ -1,0 +1,15 @@
+// fonts
+$spectral: "Spectral", serif;
+$proxima: "Proxima", sans-serif;
+
+$background: #fff;
+
+
+html, body {
+    font-family: $spectral;
+    background-color: $background;
+}
+
+input, select, textarea {
+  font-family: $spectral;
+}

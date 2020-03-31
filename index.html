@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+<head>
+	<title>Just Box</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i&amp;subset=cyrillic,latin-ext,vietnamese" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" />
+	<link rel="stylesheet" type="text/css" href="styles/just_box_scss/main.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slider-pro/1.4.0/js/jquery.sliderPro.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+
+	<header>
+		<!-- desctop -->
+		<div class="container">
+			<div class="sign">
+				<a href="#" class="sing_in">Вход</a>
+				<a href="#" class="sing_up">Регистрация</a>
+			</div>
+
+			<a href="/" class="logo"></a>
+
+			<div class="info_box">
+				<a href="tel:+380932630255" class="phone">+38 (093) 263 02 55</a>
+				<div class="basket">
+					<a href="#" class="basket_value">Корзина (6)</a>
+					<span class="money">3 400 грн.</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- mobile -->
+		<div class="mobile_container">
+			<button type="button" class="btn_mobile_nav"></button>
+			<button type="button" class="btn_mobile_search"></button>
+			<a href="/" class="mobile_logo"></a>
+			<button type="button" class="btn_mobile_sign"></button>
+			<a href="#" class="link_mobile_basket"></a>
+		</div>
+	</header>
+
+
+
+	<nav class="main">
+		<div class="container">
+			<ul>
+				<li><a href="/">Главная</a></li>
+				<li><a class="active" href="shop.html">Магазин</a></li>
+				<li><a href="about-us.html">О нас</a></li>
+				<li><a href="reviews.html">Отзывы</a></li>
+				<li><a href="contacts.html">Контакты</a></li>
+			</ul>
+			<form action="#" id="search-form">
+				<input type="text" placeholder="Поиск" class="search">
+			</form>
+		</div>
+	</nav>
+
+	<!-- mobile -->
+	<div class="mobile_sign">
+		<a href="#" class="sing_in">Вход</a>
+		<a href="#" class="sing_up">Регистрация</a>
+	</div>
+<!--- ***************************  START PAGE CONTENT **************************** -->
+
+
+
+	<section id="shop-wrapper">
+		<div class="container">
+			<ul class="shop_tabs">
+				<li class="active"><a href="#men">Для нього</a></li>
+				<li><a href="#women">Для неї</a></li>
+				<li><a href="#women">Універсальний</a></li>
+				<li><a href="#women">Дитачий</a></li>
+
+				<button class="btn_filter">Фильтр (16)
+					<span class="filter_arrow"></span>
+				</button>
+			</ul>
+			<div class="wrapper_filter">
+				<div class="filter_content">
+					<div class="filters_wrap">
+						<div class="left_filters">
+							<div class="item_column characteristics">
+								<div class="title_column">Характеристики</div>
+								<div class="values_colum">
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="r1">
+										<label for="r1">Блейзер</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="r2">
+										<label for="r2">Деним</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="r3">
+										<label for="r3">Жилет</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="r4">
+										<label for="r4">Капюшон</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="r5">
+										<label for="r5">Кимоно</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="r6">
+										<label for="r6">Куртка</label>
+									</fieldset>
+								</div>
+							</div><!--end item_column characteristics-->
+							<div class="item_column collection">
+								<div class="title_column">Коллекция</div>
+								<div class="values_colum">
+									<fieldset>
+										<input type="radio" id="c1" name="collection" class="style-radio">
+										<label for="c1">Basis</label>
+									</fieldset>
+									<fieldset>
+										<input type="radio" id="c2" name="collection" class="style-radio">
+										<label for="c2">TRF</label>
+									</fieldset>
+									<fieldset>
+										<input type="radio" id="c3" name="collection" class="style-radio">
+										<label for="c3">Women</label>
+									</fieldset>
+								</div>
+							</div><!--end item_column collection-->
+						</div>
+						<div class="right_filters">
+							<div class="item_column colour">
+								<div class="title_column">Цвет</div>
+								<div class="values_colum">
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="color-1">
+										<label for="color-1">Белый</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="color-2">
+										<label for="color-2">Желтый</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="color-3">
+										<label for="color-3">Красный</label>
+									</fieldset>
+									<fieldset>
+										<input type="checkbox" class="checkbox" id="color-4">
+										<label for="color-4">Оранжевый</label>
+									</fieldset>
+								</div>
+							</div><!--end item_column colour-->
+							<div class="item_column price_slider">
+								<div class="title_column">Цена</div>
+								<div class="values_colum">
+									<!-- <div id="slider-range"></div> -->
+								  <!-- <input type="text" id="amount"> -->
+									<div id="slider"></div>
+									<div class="wrap_input_slider">
+										<fieldset>
+											<label for="">От</label>
+											<input type="text" id="minCost" value="0"/>
+										</fieldset>
+										<fieldset>
+											<label for="">До</label>
+											<input type="text" id="maxCost" value="1000"/>
+										</fieldset>
+									</div>
+								</div>
+							</div><!--end item_column price_slider -->
+						</div>
+
+					</div><!--end filters_wrap-->
+					<div class="buttons_wrap">
+						<button type="button" class="clear_filter">Очистить фильтр</button>
+						<button type="button" class="apply_filter">применить фильтр</button>
+					</div>
+				</div><!--end filter_content-->
+
+			</div><!--end wrapper_filter-->
+
+
+			<div class="grid_product">
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+				<div class="item_product">
+					<div class="wrap_pict">
+						<img class="product_img" src="images/prod-1.png" alt="">
+						<img class="product_hover_img" src="images/prod-2.png" alt="">
+					</div>
+					<h4 class="name_product">Подарок “Joyful Morning”</h4>
+					<div class="price">2500 грн.</div>
+					<div class="wrap_button">
+						<button class="buy">Купить сейчас</button>
+					</div>
+				</div><!--end item product -->
+			</div><!--end grid_product-->
+
+
+			<div class="pagination">
+				<a href="#" class="prev_page"></a>
+				<span class="current_page">01</span>
+				<span>/08</span>
+				<a href="#" class="next_page"></a>
+			</div>
+
+		</div><!--end container-->
+	</section>
+
+
+
+
+
+<!--- *************************** END PAGE CONTENT  **************************** -->
+	<footer>
+		<div class="container top_footer">
+			<div class="descript_just_box">
+				<img class="logo_footer" src="img/logo.png" alt="">
+				<span class="descript_txt">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+					ad minim veniam, quis nostrud exercitation.
+				</span>
+			</div>
+			<div class="nav_footer">
+				<ul>
+					<li><a href="#">Главная</a></li>
+					<li><a href="#">Магазин</a></li>
+					<li><a href="#">О нас</a></li>
+					<li><a href="#">Галерея</a></li>
+					<li><a href="#">Отзывы</a></li>
+					<li><a href="#">Контакты</a></li>
+				</ul>
+			</div>
+			<div class="info_just_box">
+				<div class="wrap_news_email">
+					<label>Будьте в курсе всех новостей:</label>
+					<form action="">
+						<input type="text" placeholder="Введите Ваш Е-mail">
+						<button type="submit">Отправить</button>
+					</form>
+				</div>
+
+				<div class="wrap_social">
+						<label>Мы в соц. сетях:</label>
+						<div class="social">
+							<a class="twitter" href="#"></a>
+							<a class="instagram" href="#"></a>
+							<a class="facebook" href="#"></a>
+							<a class="pinterest" href="#"></a>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="container bottom_footer">
+			<div class="copyright">© 2018 Just Box. Все права защищены.</div>
+			<ul class="second_menu">
+				<li><a href="#">Правила сервиса</a></li>
+				<li><a href="#">FAQ</a></li>
+				<li><a href="#">Тех. поддержка</a></li>
+			</ul>
+		</div>
+	</footer>
+
+
+	<!-- pop-up SING-IN -->
+	<div id="sing-in-window">
+		<div class="wrapper_in">
+			<div class="title_popup">Вход</div>
+			<form action="#">
+				<div class="box_input">
+					<label>E-mail:</label>
+					<input type="email">
+				</div>
+				<div class="box_input">
+					<label>Пароль:</label>
+					<input type="password">
+				</div>
+				<div class="save_pass">
+					<input type="checkbox" class="checkbox" id="save_password">
+					<label for="save_password">Запомнить пароль</label>
+				</div>
+				<button type="submit" class="sing_in_button">Войти</button>
+			</form>
+
+			<div class="or_social">
+				<span class="title_or">Или помощью соцсетей:</span>
+				<div class="wrap_link_social">
+					<a href="#" class="facebook"></a>
+					<a href="#" class="google_plus"></a>
+				</div>
+			</div>
+
+			<div class="or_registration">
+				<a href="#">Еще не зарегистрированы?</a>
+			</div>
+
+		</div>
+	</div><!--end sing-in-window-->
+
+
+
+	<!-- pop-up SING-UP-->
+	<div id="sing-up-window">
+		<div class="wrapper_in">
+			<div class="title_popup">Регистрация</div>
+			<form action="#">
+				<div class="box_input">
+					<label>Ваше Имя:</label>
+					<input type="text" placeholder="Пример: Иванов Иван Иванович">
+				</div>
+				<div class="box_input">
+					<label>Телефон:</label>
+					<input type="text" placeholder="Пример: +38 (096) 664 74 95">
+				</div>
+				<div class="box_input error">
+					<label>Пароль:</label>
+					<input type="password" placeholder="Не менее 8 символов">
+					<span class="hint">* Заполните это поле</span>
+				</div>
+				<button type="submit" class="sing_up_button">Зарегистрироваться</button>
+			</form>
+
+			<div class="or_login">
+				<a href="#">Уже есть аккаунт?</a>
+			</div>
+
+		</div>
+	</div><!--end sing-in-window-->
+
+
+
+
+
+
+
+</body>
+</html>

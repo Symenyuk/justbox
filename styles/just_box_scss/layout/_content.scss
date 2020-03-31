@@ -1,0 +1,27 @@
+.container {
+   max-width: 1920px;
+   width: 100%;
+   padding: 0 58px;
+   margin: 0 auto;
+   height: 100%;
+   @include max1024 {
+     padding: 0 30px;
+   }
+   @include mobile {
+     padding: 0 20px;
+   }
+}
+
+.medium_container {
+  max-width: 1280px;
+  width: 100%;
+  padding: 0 55px;
+  margin: 0 auto;
+  height: 100%;
+  @include max1024 {
+    padding: 0 30px;
+  }
+  @include mobile {
+    padding: 0 20px;
+  }
+}

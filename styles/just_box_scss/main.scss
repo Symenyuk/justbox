@@ -1,0 +1,44 @@
+// BASE
+@import 'base/fonts';
+@import 'base/null';
+@import 'base/print';
+@import 'base/typography';
+
+// UTILS
+@import 'utils/mixins';
+@import 'utils/theme';
+
+// VENDORS
+@import 'vendors/sliderPro';
+
+// GLOBAL CLASESS
+@import 'utils/classes';
+
+// LAYOUT
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/content';
+@import 'layout/footer';
+
+// COMPONENTS
+@import 'components/forms';
+@import 'components/UiDialog';
+@import 'components/slider';
+@import 'components/social';
+@import 'components/itemProduct';
+@import 'components/pagination';
+
+// PAGES
+@import 'pages/home';
+@import 'pages/shop';
+@import 'pages/basket';
+@import 'pages/ordering';
+@import 'pages/personalArea';
+@import 'pages/aboutUs';
+@import 'pages/contacts';
+@import 'pages/reviews';
+
+@import 'pages/error';
+
+// SHAME FILE
+@import 'utils/shame';

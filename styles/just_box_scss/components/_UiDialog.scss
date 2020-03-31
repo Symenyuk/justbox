@@ -1,0 +1,162 @@
+.ui-widget-overlay {
+    background-color: rgba(#c6c6c6, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+.ui-dialog {
+    z-index: 200;
+    background-color: #fff;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+    padding: 65px 25px;
+    @include mobile {
+      padding: 0;
+    }
+}
+.ui-dialog .ui-dialog-titlebar {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    height: 0;
+}
+.ui-dialog .ui-dialog-titlebar button.ui-button {
+    background-image: url(../img/close-dialog.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    max-height: 20px;
+    border: none;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 2;
+    transition: 0.25s;
+}
+
+#sing-in-window, #sing-up-window {
+  .wrapper_in {
+    width: 495px;
+    margin: 0 auto;
+    @include mobile {
+      width: 300px;
+    }
+    > form {
+      margin-top: 40px;
+      width: 320px;
+      margin: 40px auto 0;
+      @include mobile {
+        width: 300px;
+      }
+    }
+    .title_popup {
+      color: #5f5e5a;
+      font-size: 34px;
+      font-weight: 300;
+      text-align: center;
+      @include mobile {
+        font-size: 28px;
+        padding-top: 40px;
+      }
+    }
+    .box_input {
+      margin-bottom: 25px;
+      > label {
+        @include mobile {
+          font-size: 16px;
+        }
+      }
+    }
+    input {
+      width: 100%;
+      @include mobile {
+        height: 40px;
+      }
+    }
+    .save_pass {
+      margin-bottom: 23px;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .sing_in_button {
+      @include button;
+      padding: 20px;
+      width: 100%;
+      @include mobile {
+        padding: 15px;
+      }
+    }
+    .sing_up_button {
+      @include button;
+      padding: 20px;
+      width: 100%;
+      margin: 60px 0;
+      @include mobile {
+        padding: 15px;
+      }
+    }
+    .or_social {
+      margin-top: 60px;
+      padding-bottom: 35px;
+      border-top: 1px solid #e9e9e9;
+      @include mobile {
+        margin-top: 0px;
+      }
+      .title_or {
+        display: flex;
+        justify-content: center;
+        color: #5f5e5a;
+        font-size: 18px;
+        padding: 25px 0;
+      }
+      .wrap_link_social {
+        width: 320px;
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+        @include mobile {
+          width: 280px;
+        }
+        > a {
+          width: 50%;
+          height: 100%;
+          background-image: url(../img/autorization-social.png);
+          background-repeat: no-repeat;
+          &.facebook {
+              background-position: 0 0;
+          }
+          &.google_plus {
+            background-position: 11px -122px;
+          }
+        }
+      }
+    }
+    .or_registration, .or_login {
+      padding: 25px 0 0;
+      text-align: center;
+      border-top: 1px solid #e9e9e9;
+      @include mobile {
+        padding: 20px 0;
+      }
+      > a {
+        color: #000;
+        font-size: 18px;
+        border-bottom: 1px solid #535353;
+        transition: .27s;
+        &:hover, &:focus {
+          border-bottom-color: transparent;
+          color: #b54f6d;
+        }
+      }
+    }
+  }
+}

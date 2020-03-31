@@ -1,0 +1,189 @@
+footer {
+   height: 460px;
+   margin-top: 70px;
+   background-color: #f1f2f4;
+   @include tablet {
+     height: 890px;
+   }
+   .top_footer {
+     display: flex;
+     padding: 40px 58px;
+     height: 380px;
+     @include max1024 {
+       padding: 30px;
+     }
+     @include tablet {
+       flex-direction: column;
+       height: 800px;
+     }
+     @include mobile {
+       padding: 20px;
+     }
+      > div {
+        &.descript_just_box {
+          flex-basis: 40%;
+          padding-right: 100px;
+          @include max1024 {
+            padding-right: 50px;
+            flex-basis: 20%;
+          }
+          @include tablet {
+            padding-right: 0;
+          }
+          .logo_footer {
+            display: block;
+            margin: 20px 0 60px 0;
+            @include tablet {
+              margin: 0 auto;
+            }
+          }
+          .descript_txt {
+            color: #5f5e5a;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 1.7;
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+        &.nav_footer {
+          flex-basis: 20%;
+          @include tablet {
+            flex-basis: 60%;
+          }
+          ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+            li {
+              a {
+                font-family: $proxima;
+                color: #5f5e5a;
+                font-size: 13px;
+                text-transform: uppercase;
+                @include tablet {
+                  padding: 15px 20px
+                }
+              }
+            }
+          }
+        }
+        &.info_just_box {
+          flex-basis: 40%;
+          padding-left: 100px;
+          justify-content: space-around;
+          display: flex;
+          flex-direction: column;
+          @include max1024 {
+            padding-left: 50px;
+          }
+          @include tablet {
+            border-top: 1px solid #e4e5e7;
+            padding-left: 0;
+          }
+          label {
+            display: block;
+            color: #5f5e5a;
+            font-size: 18px;
+            margin-bottom: 23px;
+          }
+          .wrap_news_email {
+            @include tablet {
+              text-align: center;
+            }
+              form {
+                display: flex;
+                width: 450px;
+                height: 60px;
+                box-shadow: 3px 0 21px rgba(0,0,0,.3);
+                @include max1024 {
+                  width: 360px;
+                }
+                @include tablet {
+                  margin: 0 auto;
+                }
+                @include mobile {
+                  width: 250px;
+                }
+                > input {
+                  color: #5f5e5a;
+                  font-size: 16px;
+                  font-weight: 300;
+                  font-style: italic;
+                  width: 75%;
+                  border: none;
+                  padding: 0 20px;
+                  @include mobile {
+                    width: 65%;
+                  }
+                }
+                > button {
+                    width: 130px;
+                    @include button;
+                    @include mobile {
+                      font-size: 12px;
+                    }
+                }
+              }
+          }
+          .wrap_social {
+            @include tablet {
+              text-align: center;
+              .social {
+                justify-content: center;
+              }
+            }
+          }
+        }
+      }
+   }
+   .bottom_footer {
+      height: 80px;
+      border-top: 1px solid #e4e5e7;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include tablet {
+        flex-direction: column;
+        height: 160px;
+        justify-content: space-evenly;
+        background-color: #F1F2F4;
+      }
+      .copyright {
+        color: #5f5e5a;
+        font-size: 16px;
+        font-weight: 300;
+        @include tablet {
+          order: 1;
+        }
+      }
+      .second_menu {
+        display: flex;
+        @include tablet {
+          order: 0;
+        }
+        > li {
+          margin: 0 12px;
+          @include mobile {
+            margin: 0 8px;  
+          }
+          > a {
+            font-size: 16px;
+            color: #5f5e5a;
+            border-bottom: 1px solid #9c9c9c;
+            transition: .27s;
+            @include mobile {
+              font-size: 12px;
+            }
+            &:hover, &:focus {
+              border-bottom-color: transparent;
+            }
+          }
+        }
+      }
+   }
+
+}

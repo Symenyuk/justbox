@@ -1,0 +1,156 @@
+#basket {
+    .wrap_basket_product {
+      .list_prod {
+        @include max1024 {
+          order: 1;
+          margin-top: 45px;
+        }
+        .item_pr {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #e9e9e9;
+          padding: 30px 0;
+          @include mobile {
+            padding-top: 90px;
+            position: relative;
+          }
+
+          .image_pr {
+            width: 154px;
+            height: 154px;
+            @include mobile {
+              width: 100px;
+              height: 100%;
+            }
+          }
+          .descr_pr {
+            @include mobile {
+              width: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              padding-top: 20px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+            }
+            .name_pr {
+              color: #5f5e5a;
+              font-size: 20px;
+              margin-bottom: 20px;
+              @include mobile {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+              }
+            }
+            .price_pr {
+              color: #000;
+              font-size: 14px;
+            }
+          }
+          .count {
+            display: flex;
+            justify-content: space-between;
+            width: 125px;
+            height: 44px;
+            button {
+              background-image: url(../img/plus-minus.png);
+              background-repeat: no-repeat;
+              width: 30px;
+              height: 100%;
+              background-color: transparent;
+              border: none;
+
+              &.minus {
+                background-position: 0 14px;
+                &:hover, &:focus {
+                  background-position: 0 -68px;
+                }
+              }
+              &.plus {
+                background-position: -70px 14px;
+                &:hover, &:focus {
+                  background-position: -70px -68px;
+                }
+              }
+            }
+            .count_pr {
+              width: 64px;
+              height: 100%;
+              border:1px solid #eaeaea;
+              color: #5f5e5a;
+              font-size: 20px;
+              font-weight: 500;
+              padding: 0 15px;
+              text-align: right;
+            }
+          }
+          .delete_pr {
+            width: 35px;
+            height: 35px;
+            background-color: transparent;
+            background-image: url(../img/ico-basket.png);
+            background-repeat: no-repeat;
+            background-position: center 7px;
+            border: none;
+            &:hover, &:focus {
+              background-position: center -52px;
+            }
+          }
+          &:hover, &:focus {
+            .name_pr {
+              color: #bf768b;
+            }
+            .count_pr {
+              color: #bf768b;
+            }
+          }
+          &:first-child {
+            border-top: 1px solid #e9e9e9;
+          }
+        }
+
+        .wrap_comment {
+          padding-top: 40px;
+          > label {
+            color: #5f5e5a;
+            font-size: 18px;
+            display: block;
+            padding-bottom: 25px;
+          }
+          > textarea {
+            font-family: $spectral;
+            display: block;
+            width: 100%;
+            height: 115px;
+            color: #5f5e5a;
+            font-weight: 300;
+            font-style: italic;
+            padding: 10px 20px;
+            border: 1px solid #e9e9e9;
+            max-width: 700px;
+            min-width: 300px;
+            @include max1024 {
+              max-width: 100%;
+              width: 100%;
+            }
+            @include mobile {
+              min-width: 270px;
+            }
+            &:hover, &:focus {
+              border: 1px solid #e9e9e9;
+            }
+          }
+        }
+      }
+      .result_list_prod {
+        @include max1024 {
+          order: 0;
+        }
+
+      }
+    }
+}

@@ -1,0 +1,284 @@
+input.style-input {
+    border: 1px solid #d6d6d6;
+    outline: none;
+    border-radius: 3px;
+    background-color: #f5f5f5;
+    padding: 0 15px;
+    height: 42px;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #fff;
+    }
+    &.search_input {
+        color: #9e9e9e;
+        font-size: 13px;
+        font-style: italic;
+        background-image: url(../image/search-blau.png);
+        background-repeat: no-repeat;
+        background-position: 95% center;
+    }
+}
+
+
+select.style-select {
+    background-color: #fefdfd;
+    border: 1px solid #dbdada;
+    outline: none;
+    border-radius: 0;
+    padding: 0 6px;
+    color: #252525;
+    font-size: 14px;
+    font-weight: 400;
+    height: 35px;
+    color: #818181;
+    cursor: pointer;
+
+    background-image: url(../img/style-select.svg);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-size: 12px;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    appearance: none!important;
+    outline: none;
+
+	&::-ms-expand { display: none; }
+    &:hover {
+        background-color: #fff;
+        border-color: #4594bd;
+    }
+    > option {
+        padding: 5px 15px;
+    }
+}
+
+
+// textarea.style-textarea {
+//     border: 1px solid #d6d6d6;
+//     outline: none;
+//     border-radius: 3px;
+//     background-color: #f5f5f5;
+//     padding: 10px 15px;
+//     font-family: 'Open Sans', sans-serif;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//         background-color: #fff;
+//     }
+// }
+
+
+//checkbox-button
+.checkbox {
+   $size: 24px;
+    & + label {
+        cursor: pointer;
+        padding-left: 40px;
+        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(#5f5e5a, .65);
+        min-height: 16px;
+        display: flex;
+        align-items: center;
+        @include unSelect;
+        // margin: 12px 0;
+        transition: 0.2s;
+        &:hover {
+           color: rgba(#5f5e5a, 1);
+        }
+    }
+    &:not(checked) {
+        position: absolute;
+        opacity: 0;
+        & + label {
+            position: relative;
+        }
+        // border checked
+        & + label:before {
+            content: '';
+            position: absolute;
+            width: $size;
+            height: $size;
+            border-radius: 0;
+            top: 0;
+            left: 0;
+            border: 1px solid #e0e0e0;
+        }
+        // icons checked
+        & + label:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: $size + 4;
+            height: $size;
+        }
+    }
+    &:checked  {
+      & + label {color: rgba(#5f5e5a, 1); }
+      & + label:after {
+            background-image: url(../img/check.png);
+            background-repeat: no-repeat;
+            background-position: 6px 4px;
+        }
+    }
+}
+
+
+
+//radio-button (design finZdor)
+input[type='radio'].style-radio {
+    & + label {
+        cursor: pointer;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(#5f5e5a, .65);
+        display: flex;
+        align-items: center;
+        @include unSelect;
+        &:hover {
+           color: rgba(#5f5e5a, 1);
+        }
+    }
+    &:not(checked) {
+        position: absolute;
+        opacity: 0;
+        & + label {
+            position: relative;
+        }
+        & + label:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 21px;
+            height: 21px;
+            border: 1px solid #cecece;
+            border-radius: 50%;
+            background: #fff;
+            position: relative;
+            margin-right: 7px;
+        }
+        & + label:after {
+            content: '';
+            position: absolute;
+            top: 6px;
+            left: 6px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: #bf768b;
+            opacity: 0;
+        }
+    }
+    &:checked {
+        & + label {
+            color: #bf768b;
+        }
+        & + label:after {
+            opacity: 1;
+        }
+    }
+}
+
+//END radio-button
+
+
+.input-error {
+    font-size: 12px;
+    color: #e4332d;
+    display: block;
+    padding-top: 3px;
+    text-align: right;
+}
+
+
+
+
+
+
+// ui-slider
+.wrap_input_slider {
+  width: 200px;
+  display: flex;
+  > fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#slider {
+	width: 200px;
+}
+.ui-slider {
+  position: relative;
+  .ui-slider-range {
+      position: absolute;
+      z-index: 1;
+      font-size: .7em;
+      display: block;
+      border: 0;
+      background-position: 0 0;
+  }
+  .ui-slider-handle {
+      position: absolute;
+      z-index: 2;
+      width: 1.2em;
+      height: 1.2em;
+      cursor: default;
+  }
+}
+.ui-state-default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(#000, .11);
+  &:before {
+    @include pseudo;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: #bf768b;
+    cursor: pointer;
+  }
+}
+/* горизонтальный слайдер (сама полоса по которой бегает ползунок) */
+.ui-slider-horizontal {
+	 height: 1px;
+}
+/* позиционируем ползунки */
+.ui-slider-horizontal .ui-slider-handle {
+	top: -8px;
+	margin-left: -6px;
+  outline: none;
+}
+.ui-slider-horizontal .ui-slider-range {
+	top: 0;
+	height: 100%;
+}
+.ui-slider-horizontal .ui-slider-range-min {
+	left: 0;
+}
+.ui-slider-horizontal .ui-slider-range-max {
+	right: 0;
+}
+/* оформление полосы по которой ходит ползунок */
+.ui-widget-content {
+	background: #e0e0e0;
+}
+/* оформление активного участка (между двумя ползунками) */
+.ui-widget-header {
+	// border: 1px solid #D4D4D4;
+	background: #bf768b;
+}

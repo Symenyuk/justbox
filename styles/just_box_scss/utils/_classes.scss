@@ -1,0 +1,353 @@
+// GRID! USING BASKET, ORDERING, PERSONAL-AREA
+.flex_box {
+  display: flex;
+  @include max1024 {
+    flex-direction: column;
+  }
+  .left_box {
+    flex-basis: 65%;
+    margin-right: 45px;
+    @include max1024 {
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
+  }
+  .right_box {
+    flex-basis: 35%;
+    margin-left: 45px;
+    @include max1024 {
+      margin-left: 0;
+    }
+  }
+}
+
+// FORMS! using all project
+.box_input {
+  > label {
+    display: block;
+    color: #5f5e5a;
+    font-size: 18px;
+    padding-bottom: 15px;
+    @include mobile {
+
+    }
+  }
+  > input {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    transition: .27s;
+    padding: 0 20px;
+    height: 57px;
+    font-size: 16px;
+    color: #000;
+    @include mobile {
+      font-size: 14px;
+    }
+    &:hover, &:focus {
+      border-color: #cbcbcb;
+      box-shadow: 0 3px 21px rgba(0, 0, 0, 0.06);
+    }
+  }
+  > select {
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: 3px 0 21px rgba(0,0,0,.03);
+    transition: .27s;
+    padding: 0 20px;
+    height: 57px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    cursor: pointer;
+    background-image: url(../img/style-select.svg);
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-size: 14px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+    appearance: none!important;
+    outline: none;
+  	&::-ms-expand { display: none; }
+      &:hover, &:focus {
+        border-color: #cbcbcb;
+        box-shadow: 0 3px 21px rgba(0, 0, 0, 0.06);
+      }
+      > option {
+          padding: 5px 15px;
+      }
+  }
+
+  fieldset {
+    border: 1px solid #e0e0e0;
+    border-bottom: none;
+    padding: 15px 20px;
+    &:last-child {border-bottom: 1px solid #e0e0e0;}
+  }
+  input[type='radio'] {
+      & + label {
+          cursor: pointer;
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(#000, .6);
+          display: flex;
+          align-items: center;
+          @include unSelect;
+      }
+      &:not(checked) {
+          position: absolute;
+          opacity: 0;
+          & + label {
+              position: relative;
+          }
+          & + label:before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 21px;
+              height: 21px;
+              border: 1px solid #cacaca;
+              border-radius: 50%;
+              background: #fff;
+              position: relative;
+              margin-right: 20px;
+          }
+          & + label:after {
+              content: '';
+              position: absolute;
+              top: 6px;
+              left: 6px;
+              width: 9px;
+              height: 9px;
+              border-radius: 50%;
+              background-color: #bf768b;
+              opacity: 0;
+          }
+      }
+      &:checked {
+          & + label {
+              color: #000;
+          }
+          & + label:after {
+              opacity: 1;
+          }
+      }
+  }
+
+
+
+
+  &:hover, &focus {
+    > label {
+      color: #bf768b;
+    }
+  }
+  > textarea {
+    font-family: $spectral;
+    display: block;
+    width: 100%;
+    height: 115px;
+    color: #5f5e5a;
+    font-weight: 300;
+    font-style: italic;
+    padding: 10px 20px;
+    border: 1px solid #e9e9e9;
+    &:hover, &:focus {
+      border: 1px solid #e9e9e9;
+    }
+  }
+  &.error {
+    > input {
+      border: 1px solid #fe9393;
+    }
+    > .hint {
+      display: flex;
+      justify-content: flex-end;
+      padding: 4px 0;
+      color: #ff0000;
+      font-size: 13px;
+      font-weight: 300;
+      font-style: italic;
+    }
+  }
+}
+
+
+// USING BASKET & ORDERING
+.result_list_prod {
+  border-top: 1px solid #e9e9e9;
+  label {
+    color: #5f5e5a;
+    font-size: 20px;
+  }
+  span {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .total_price {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 18px;
+  }
+  .shipping_cost {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    padding-top: 18px;
+  }
+  .total_payment {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e9e9e9;
+    padding: 30px 0;
+    > span {
+      color: #bf768b;
+      font-size: 26px;
+      font-weight: 500;
+    }
+  }
+  .payment_method {
+    display: flex;
+    justify-content: space-between;
+    > button {
+      border: 1px solid #e0e0e0;
+      background-color: #fff;
+      width: 180px;
+      height: 70px;
+      background-image: url(../img/payment_method.png);
+      background-repeat: no-repeat;
+      @include mobile {
+        width: 130px;
+      }
+      &.google {
+        background-position: center 21px;
+      }
+      &.paypal {
+        background-position: center -68px;
+      }
+    }
+  }
+  .checkout {
+    @include button;
+    width: 100%;
+    padding: 20px;
+    margin: 30px 0;
+  }
+  .continue_shopp {
+    @include button;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #e0e0e0;
+    transition: 0.27s;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+// using ordering & personal-area
+.item_prod_small {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  .img_pod {
+    width: 95px;
+    height: 95px;
+  }
+  .descr_prod {
+    padding: 15px 25px;
+    @include mobile {
+      padding: 15px;
+    }
+    .name_prod {
+      color: #5f5e5a;
+      font-size: 18px;
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+    .count_prod {
+      color: #000;
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+  &:first-child {
+    padding-top: 30px;
+    border-top: 1px solid #e9e9e9;
+  }
+  &:last-child {
+    border-bottom: 1px solid #e9e9e9;
+  }
+}
+
+// GRID! using contacts-page & reviews-page
+.wrap_two_box {
+  display: flex;
+  justify-content: space-between;
+  > div {
+    flex-basis: 50%;
+    background-color: #fff;
+    > .title {
+      color: #5f5e5a;
+      font-size: 24px;
+      padding-bottom: 50px;
+      text-align: center;
+    }
+    &:first-child {
+      margin-right: 30px;
+      @include max1024 {
+        margin-right: 0;
+      }
+    }
+    &:last-child  {
+      margin-left: 30px;
+      @include max1024 {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// forms contacts-page & reviews-page
+.contacts_form, .reviews_form {
+  padding: 0 65px;
+  @include tablet {
+    padding: 0;
+  }
+  > .box_input {
+    width: 100%;
+    margin-bottom: 30px;
+    > input, textarea {
+      width: 100%;
+      max-width: 615px;
+      min-width: 300px;
+      @include max1024 {
+        max-width: 100%;
+      }
+      @include mobile {
+        min-width: 270px;
+      }
+    }
+  }
+  .wrap_google_captcha {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    margin: 35px auto;
+    @include button;
+    width: 100%;
+    padding: 20px;
+  }
+}
